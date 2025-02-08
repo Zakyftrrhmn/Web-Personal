@@ -229,21 +229,7 @@
             >
               Sedikit cerita tentang saya
             </h5>
-            <p class="text-xs :text-sm mt-4 text-justify">
-              Saya mulai mengenal pemrograman pada tahun 2019 ketika saya masuk
-              jurusan Rekayasa Perangkat Lunak di SMK. Di sana, saya belajar PHP
-              dengan framework Laravel dan sedikit Bootstrap. Namun, saya
-              benar-benar mulai fokus pada pemrograman pada tahun 2022, saat
-              saya duduk di kelas 12 dan mempersiapkan ujian LSP dengan membuat
-              website pengaduan masyarakat. Setelah lulus, saya bekerja selama
-              satu tahun di perusahaan yang tidak berkaitan dengan IT, sehingga
-              saya sempat melupakan beberapa hal dalam coding. Setelah satu
-              tahun bekerja, saya memutuskan untuk melanjutkan kuliah dengan
-              mengambil jurusan yang berkaitan dengan pemrograman. pada
-              kesempatan ini saya menetapkan target untuk menjadi seorang Full
-              Stack Web Developer dengan keahlian di React, Tailwind CSS,
-              Laravel, dan MySQL. Doain yahhh mweheh
-            </p>
+            <p class="text-xs :text-sm mt-4 text-justify" id="typing-text"></p>
           </div>
         </div>
       </div>
@@ -1130,6 +1116,22 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+
+    <!-- Text -->
+    <script>
+      const text =
+        "Saya mulai mengenal pemrograman pada tahun 2019 ketika saya masuk jurusan Rekayasa Perangkat Lunak di SMK. Di sana, saya belajar PHP dengan framework Laravel dan sedikit Bootstrap. Namun, saya benar-benar mulai fokus pada pemrograman pada tahun 2022, saat saya duduk di kelas 12 dan mempersiapkan ujian LSP dengan membuat website pengaduan masyarakat. Setelah lulus, saya bekerja selama satu tahun di perusahaan yang tidak berkaitan dengan IT, sehingga saya sempat melupakan beberapa hal dalam coding. Setelah satu tahun bekerja, saya memutuskan untuk melanjutkan kuliah dengan mengambil jurusan yang berkaitan dengan pemrograman. pada kesempatan ini saya menetapkan diri untuk menjadi Stack Web Developer dengan keahlian di React, Tailwind CSS, Laravel, dan MySQL. Doain yahhh mweheh";
+      let index = 0;
+      function typeEffect() {
+        if (index < text.length) {
+          document.getElementById("typing-text").innerHTML +=
+            text.charAt(index);
+          index++;
+          setTimeout(typeEffect, 10);
+        }
+      }
+      window.onload = typeEffect;
     </script>
   </body>
 </html>
