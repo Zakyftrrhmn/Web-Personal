@@ -12,10 +12,16 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <!-- Data AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body class="bg-background font-poppins text-white">
     <!-- Navbar -->
-    <nav class="mx-auto pt-12 px-6 md:px-8 lg:px-12">
+    <nav
+      class="mx-auto pt-12 px-6 md:px-8 lg:px-12"
+      data-aos="fade-down"
+      data-aos-duration="1000"
+    >
       <div class="flex justify-between items-center">
         <!-- Logo -->
         <span
@@ -79,10 +85,18 @@
       </div>
     </nav>
 
+    <div class="absolute z-[-99]">
+      <img src="assets/image/background-hero.png" alt="" />
+    </div>
+
     <!-- Hero Section -->
-    <section id="Home" class="mx-auto pt-12 px-6 md:px-8 lg:px-12">
+    <section id="Home" class="relative mx-auto pt-12 px-6 md:px-8 lg:px-12">
       <div class="grid grid-cols-12 gap-5 items-center md:items-start">
-        <div class="col-span-12 md:col-span-6 h-full justify-between">
+        <div
+          class="col-span-12 md:col-span-6 h-full justify-between"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
           <div
             class="h-full flex flex-col md:gap-x-5 md:flex-row items-center bg-linear-to-r from-from to-to p-7 rounded-2xl"
           >
@@ -94,13 +108,17 @@
               />
             </picture>
             <div class="flex flex-col gap-y-2 mt-5 text-center md:text-start">
-              <span
-                >Hallo
+              <div class="flex space-x-1 text-3xl font-bold">
+                <span class="animate-bounce [animation-delay:0s]">H</span>
+                <span class="animate-bounce [animation-delay:0.1s]">a</span>
+                <span class="animate-bounce [animation-delay:0.2s]">l</span>
+                <span class="animate-bounce [animation-delay:0.3s]">l</span>
+                <span class="animate-bounce [animation-delay:0.4s]">o</span>
                 <i
-                  class="bx bxs-hand text-base md:text-xl text-amber-400 animate-bounce"
+                  class="bx bxs-hand text-xl text-amber-400 animate-bounce [animation-delay:0.5s]"
                 ></i>
-                !! Nama Saya</span
-              >
+              </div>
+              <span class="text-xs">Nama Saya</span>
               <h5 class="font-bold uppercase text-3xl md:text-4xl">
                 Zaky Fathur Rahman
               </h5>
@@ -113,14 +131,22 @@
         </div>
         <div class="col-span-12 md:col-span-6">
           <div class="grid grid-cols-12 gap-5 items-center md:items-start">
-            <div class="col-span-12">
+            <div
+              class="col-span-12"
+              data-aos="zoom-in-down"
+              data-aos-duration="1000"
+            >
               <div class="bg-linear-to-b from-from to-to p-3 rounded-2xl">
                 <p class="text-xs text-center">
                   Selamat datang di portfolio saya yang masih pemula ini! 😆✨
                 </p>
               </div>
             </div>
-            <div class="col-span-6 h-full">
+            <div
+              class="col-span-6 h-full"
+              data-aos="zoom-in-left"
+              data-aos-duration="1000"
+            >
               <div
                 class="flex flex-col justify-between gap-y-2 items-center bg-linear-to-b from-cardWhiteFrom to-cardWhiteTo text-black p-3 md:p-7 rounded-2xl h-full"
               >
@@ -154,7 +180,11 @@
                 />
               </audio>
             </div>
-            <div class="col-span-6 h-full">
+            <div
+              class="col-span-6 h-full"
+              data-aos="zoom-in-left"
+              data-aos-duration="1000"
+            >
               <div class="flex flex-col gap-5 h-full">
                 <!-- github -->
                 <div
@@ -192,7 +222,7 @@
             </div>
           </div>
         </div>
-        <div class="col-span-12">
+        <div class="col-span-12" data-aos="fade-up" data-aos-duration="1000">
           <div class="bg-linear-to-r from-from to-to p-7 rounded-2xl">
             <h5
               class="font-bold text-base md:text-xl text-center md:text-start"
@@ -223,12 +253,20 @@
     <!-- Educations -->
     <section id="Projects" class="mx-auto pt-12 md:pt-16 px-6 md:px-8 lg:px-12">
       <div class="grid grid-cols-12 gap-y-4 gap-x-3 md:gap-x-4 lg:gap-x-16">
-        <div class="col-span-12 w-fit">
+        <div
+          class="col-span-12 w-fit"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
           <div class="bg-gray-700/50 py-2 px-5 rounded-lg">
             <h1 class="text-xl md:text-2xl lg:text-3xl font-bold">Projects</h1>
           </div>
         </div>
-        <div class="col-span-6 md:col-span-4">
+        <div
+          class="col-span-6 md:col-span-4"
+          data-aos="fade-right"
+          data-aos-duration="2000"
+        >
           <div class="flex flex-col gap-y-3">
             <img
               src="assets/image/Projects-bkk.png"
@@ -249,19 +287,31 @@
       </div>
     </section>
 
+    <div class="absolute rotate-90 left-[-110px] z-[-100]">
+      <img src="assets/image/blur-layer.png" class="" alt="" />
+    </div>
+
     <!-- Educations -->
     <section
       id="Education"
       class="mx-auto pt-12 md:pt-16 px-6 md:px-8 lg:px-12"
     >
       <div class="grid grid-cols-12 gap-y-4 md:gap-x-4 lg:gap-x-16">
-        <div class="col-span-12 mx-auto">
+        <div
+          class="col-span-12 mx-auto"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
           <div class="bg-gray-700/50 py-2 px-5 rounded-lg">
             <h1 class="text-xl md:text-2xl lg:text-3xl font-bold">Education</h1>
           </div>
         </div>
         <!-- SMK -->
-        <div class="col-span-12 md:col-span-6">
+        <div
+          class="col-span-12 md:col-span-6"
+          data-aos="zoom-in-right"
+          data-aos-duration="2000"
+        >
           <div
             class="flex flex-col bg-gradient-to-b from-cardWhiteFrom to-cardWhiteTo p-5 rounded-2xl text-black gap-y-5 md:gap-y-8 lg:gap-y-10 shadow-2xl"
           >
@@ -351,7 +401,11 @@
         </div>
 
         <!-- Kuliah -->
-        <div class="col-span-12 md:col-span-6">
+        <div
+          class="col-span-12 md:col-span-6"
+          data-aos="zoom-in-left"
+          data-aos-duration="2000"
+        >
           <div
             class="flex flex-col bg-gradient-to-b from-card-from to-card-to p-5 rounded-2xl text-black gap-y-5 md:gap-y-8 lg:gap-y-10 shadow-2xl"
           >
@@ -448,7 +502,11 @@
       class="mx-auto pt-12 md:pt-16 px-6 md:px-8 lg:px-12"
     >
       <div class="grid grid-cols-12 gap-y-4 md:gap-x-4 lg:gap-x-16">
-        <div class="col-span-12 mx-auto">
+        <div
+          class="col-span-12 mx-auto"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
           <div class="bg-gray-700/50 py-2 px-5 rounded-lg">
             <h1 class="text-xl md:text-2xl lg:text-3xl font-bold">
               Certificates
@@ -457,7 +515,11 @@
         </div>
 
         <!-- Certificate -->
-        <div class="col-span-12 md:col-span-6">
+        <div
+          class="col-span-12 md:col-span-6"
+          data-aos="zoom-in-down"
+          data-aos-duration="2000"
+        >
           <div
             class="flex flex-col bg-gradient-to-b hover:bg-gradient-to-b from-cardWhiteFrom hover:from-card-from to-cardWhiteTo hover:to-card-to p-5 rounded-2xl text-black gap-y-5 md:gap-y-6 lg:gap-y-7 shadow-2xl hover:cursor-pointer"
           >
@@ -467,7 +529,7 @@
               >
                 <img
                   src="assets/image/logo-dicoding.jpg"
-                  class="w-full h-full object-cover rounded-full"
+                  class="w-8 h-8 object-cover rounded-full"
                   alt=""
                 />
                 <span class="font-semibold text-sm">Dicoding</span>
@@ -533,7 +595,11 @@
         </div>
 
         <!-- Certificate -->
-        <div class="col-span-12 md:col-span-6">
+        <div
+          class="col-span-12 md:col-span-6"
+          data-aos="zoom-in-down"
+          data-aos-duration="2000"
+        >
           <div
             class="flex flex-col bg-gradient-to-b hover:bg-gradient-to-b from-cardWhiteFrom hover:from-card-from to-cardWhiteTo hover:to-card-to p-5 rounded-2xl text-black gap-y-5 md:gap-y-6 lg:gap-y-7 shadow-2xl hover:cursor-pointer"
           >
@@ -543,7 +609,7 @@
               >
                 <img
                   src="assets/image/logo-dicoding.jpg"
-                  class="w-full h-full object-cover rounded-full"
+                  class="w-8 h-8 object-cover rounded-full"
                   alt=""
                 />
                 <span class="font-semibold text-sm">Dicoding</span>
@@ -609,7 +675,11 @@
         </div>
 
         <!-- Certificate -->
-        <div class="col-span-12 md:col-span-6">
+        <div
+          class="col-span-12 md:col-span-6"
+          data-aos="zoom-in-down"
+          data-aos-duration="2000"
+        >
           <div
             class="flex flex-col bg-gradient-to-b hover:bg-gradient-to-b from-cardWhiteFrom hover:from-card-from to-cardWhiteTo hover:to-card-to p-5 rounded-2xl text-black gap-y-5 md:gap-y-6 lg:gap-y-7 shadow-2xl hover:cursor-pointer"
           >
@@ -619,7 +689,7 @@
               >
                 <img
                   src="assets/image/logo-bwa.jpg"
-                  class="w-20 h-full object-cover rounded-full"
+                  class="w-8 h-8 object-cover rounded-full"
                   alt=""
                 />
                 <span class="font-semibold text-sm">Build With Angga</span>
@@ -685,7 +755,11 @@
         </div>
 
         <!-- Certificate -->
-        <div class="col-span-12 md:col-span-6">
+        <div
+          class="col-span-12 md:col-span-6"
+          data-aos="zoom-in-down"
+          data-aos-duration="2000"
+        >
           <div
             class="flex flex-col bg-gradient-to-b hover:bg-gradient-to-b from-cardWhiteFrom hover:from-card-from to-cardWhiteTo hover:to-card-to p-5 rounded-2xl text-black gap-y-5 md:gap-y-6 lg:gap-y-7 shadow-2xl hover:cursor-pointer"
           >
@@ -695,7 +769,7 @@
               >
                 <img
                   src="assets/image/bnsp-logo.png"
-                  class="w-20 h-full object-cover rounded-full"
+                  class="w-8 h-8 object-cover rounded-full"
                   alt=""
                 />
                 <span class="font-semibold text-sm">BNSP</span>
@@ -764,7 +838,11 @@
 
     <section id="Addition" class="mx-auto pt-12 md:pt-16 px-6 md:px-8 lg:px-12">
       <div class="grid grid-cols-12 gap-5">
-        <div class="col-span-12 md:col-span-4">
+        <div
+          class="col-span-12 md:col-span-4"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <div class="space-y-6 flex flex-col justify-between h-full">
             <span
               class="text-[#C6FCA6] font-semibold uppercase text-base md:text-xl lg:text-2xl"
@@ -795,7 +873,11 @@
             </div>
           </div>
         </div>
-        <div class="col-span-12 md:col-span-4">
+        <div
+          class="col-span-12 md:col-span-4"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <div
             class="relative flex flex-col p-10 gap-y-4 bg-black/20 border-1 border-[#C6FCA6]/20 rounded-lg pt-10 overflow-hidden h-full"
           >
@@ -867,7 +949,11 @@
             </div>
           </div>
         </div>
-        <div class="col-span-12 md:col-span-4">
+        <div
+          class="col-span-12 md:col-span-4"
+          data-aos="fade-up"
+          data-aos-duration="3000"
+        >
           <div class="flex flex-row md:flex-col gap-4 h-full">
             <!-- MAPS CONTAINER -->
             <div
@@ -1038,6 +1124,12 @@
 
         window.addEventListener("scroll", changeActiveLink);
       });
+    </script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>
