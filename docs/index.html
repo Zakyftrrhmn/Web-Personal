@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Tailwind Link CSS -->
+    <link rel="stylesheet" href="zfr.css" />
+    <!-- boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-background font-poppins text-white">
+    <!-- Navbar -->
+    <nav class="mx-auto pt-12 px-6 md:px-8 lg:px-12">
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <span
+          class="font-tangerine lg:text-5xl md:text-4xl text-2xl font-bold hover:cursor-pointer"
+        >
+          @Zakyftrrhmn_
+        </span>
+
+        <!-- Desktop Menu -->
+        <ul
+          class="hidden lg:flex gap-x-7 *:text-secondary *:hover:text-white *:font-semibold *:ease-in *:duration-200"
+        >
+          <li><a class="nav-link" href="#Home">Home</a></li>
+          <li><a class="nav-link" href="#Projects">Projects</a></li>
+          <li><a class="nav-link" href="#Education">Education</a></li>
+          <li><a class="nav-link" href="#Certificate">Certificate</a></li>
+          <li><a class="nav-link" href="#Addition">Addition</a></li>
+        </ul>
+
+        <!-- CTA Button -->
+        <button
+          class="hidden lg:block bg-secondary/15 py-2 px-5 md:py-3 md:px-7 rounded-lg border border-gray-200/25 hover:cursor-pointer font-semibold text-sm md:text-base"
+          onclick="downloadCV()"
+        >
+          Download CV
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="menu-toggle"
+          class="lg:hidden p-2 text-white focus:outline-none"
+        >
+          <i class="bx bx-menu-alt-right text-2xl md:text-3xl"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden flex flex-col mt-4 space-y-3 bg-secondary/15 p-4 rounded-lg lg:hidden"
+      >
+        <a href="#Home" class="block text-white hover:text-gray-300">Home</a>
+        <a href="#Projects" class="block text-secondary hover:text-white"
+          >Projects</a
+        >
+        <a href="#Education" class="block text-secondary hover:text-white"
+          >Education</a
+        >
+        <a href="#Certificate" class="block text-secondary hover:text-white"
+          >Certificate</a
+        >
+        <a href="#Addition" class="block text-secondary hover:text-white"
+          >Addition</a
+        >
+        <button
+          class="mt-3 w-full bg-secondary/15 py-2 px-5 rounded-lg border border-gray-200/25 font-semibold text-sm"
+          onclick="downloadCV()"
+        >
+          Download CV
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="Home" class="mx-auto pt-12 px-6 md:px-8 lg:px-12">
+      <div class="grid grid-cols-12 gap-5 items-center md:items-start">
+        <div class="col-span-12 md:col-span-6 h-full justify-between">
+          <div
+            class="h-full flex flex-col md:gap-x-5 md:flex-row items-center bg-linear-to-r from-from to-to p-7 rounded-2xl"
+          >
+            <picture>
+              <img
+                src="assets/image/crodile.png"
+                class="size-48 md:size-72 rounded-lg border"
+                alt=""
+              />
+            </picture>
+            <div class="flex flex-col gap-y-2 mt-5 text-center md:text-start">
+              <span
+                >Hallo
+                <i
+                  class="bx bxs-hand text-base md:text-xl text-amber-400 animate-bounce"
+                ></i>
+                !! Nama Saya</span
+              >
+              <h5 class="font-bold uppercase text-3xl md:text-4xl">
+                Zaky Fathur Rahman
+              </h5>
+              <p class="text-xs md:text-sm font-medium text-quaternary">
+                Role? hmmm rencananya sih saya mau jadi Front End Web Developer.
+                xixixi
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-6">
+          <div class="grid grid-cols-12 gap-5 items-center md:items-start">
+            <div class="col-span-12">
+              <div class="bg-linear-to-b from-from to-to p-3 rounded-2xl">
+                <p class="text-xs text-center">
+                  Selamat datang di portfolio saya yang masih pemula ini! 😆✨
+                </p>
+              </div>
+            </div>
+            <div class="col-span-6 h-full">
+              <div
+                class="flex flex-col justify-between gap-y-2 items-center bg-linear-to-b from-cardWhiteFrom to-cardWhiteTo text-black p-3 md:p-7 rounded-2xl h-full"
+              >
+                <picture>
+                  <img
+                    src="assets/image/Keysa.jpg"
+                    class="w-full rounded-full object-cover transition-all"
+                    alt=""
+                    id="AlbumImage"
+                  />
+                </picture>
+                <div
+                  class="flex flex-row items-center gap-x-3 w-full justify-between"
+                >
+                  <div class="flex flex-col gap-1">
+                    <span class="text-xs md:text-sm lg:text-base font-bold"
+                      >Keisya Levronika</span
+                    >
+                    <span class="text-xs text-secondary"
+                      >Jadi kekasihku saja</span
+                    >
+                  </div>
+                  <i class="bx bx-play-circle text-2xl" id="playButton"></i>
+                </div>
+              </div>
+              <!-- Audio Element -->
+              <audio id="audioPlayer">
+                <source
+                  src="assets/audio/Jadi-Kekasihku-Saja.mp3"
+                  type="audio/mpeg"
+                />
+              </audio>
+            </div>
+            <div class="col-span-6 h-full">
+              <div class="flex flex-col gap-5 h-full">
+                <!-- github -->
+                <div
+                  class="bg-linear-to-b from-githubFrom to-githubTo p-3 rounded-2xl shadow-2xl h-1/2 flex flex-col justify-between"
+                >
+                  <div class="flex justify-between items-center">
+                    <i class="bx bxl-github text-4xl"></i>
+                    <a href="https://github.com/Zakyftrrhmn" target="_blank"
+                      ><i class="bx bx-link-external text-2xl"></i
+                    ></a>
+                  </div>
+                  <div class="mt-6 flex flex-col">
+                    <span class="font-bold tracking-[2px]">Github</span>
+                    <span class="text-base truncate">@Zakyftrrhmn_</span>
+                  </div>
+                </div>
+                <!-- email -->
+                <div
+                  class="bg-linear-to-b from-email to-email p-3 rounded-2xl shadow-2xl h-1/2 flex flex-col justify-between"
+                >
+                  <div class="flex justify-between items-center">
+                    <i class="bx bxs-envelope text-4xl shadow-2xl"></i>
+                    <a
+                      href="https://mail.google.com/mail/u/0/#inbox?compose=new"
+                      target="_blank"
+                      ><i class="bx bx-link-external text-2xl"></i
+                    ></a>
+                  </div>
+                  <div class="mt-6 flex flex-col">
+                    <span class="font-bold tracking-[2px]">Gmail</span>
+                    <p class="text-base truncate">Zakifaturrahman0@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12">
+          <div class="bg-linear-to-r from-from to-to p-7 rounded-2xl">
+            <h5
+              class="font-bold text-base md:text-xl text-center md:text-start"
+            >
+              Sedikit cerita tentang saya
+            </h5>
+            <p class="text-xs :text-sm mt-4 text-justify">
+              Saya mulai mengenal pemrograman pada tahun 2019 ketika saya masuk
+              jurusan Rekayasa Perangkat Lunak di SMK. Di sana, saya belajar PHP
+              dengan framework Laravel dan sedikit Bootstrap. Namun, saya
+              benar-benar mulai fokus pada pemrograman pada tahun 2022, saat
+              saya duduk di kelas 12 dan mempersiapkan ujian LSP dengan membuat
+              website pengaduan masyarakat. Setelah lulus, saya bekerja selama
+              satu tahun di perusahaan yang tidak berkaitan dengan IT, sehingga
+              saya sempat melupakan beberapa hal dalam coding. Setelah satu
+              tahun bekerja, saya memutuskan untuk melanjutkan kuliah dengan
+              mengambil jurusan yang berkaitan dengan pemrograman. pada
+              kesempatan ini saya menetapkan target untuk menjadi seorang Full
+              Stack Web Developer dengan keahlian di React, Tailwind CSS,
+              Laravel, dan MySQL. Doain yahhh mweheh
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <!-- Educations -->
+    <section id="Projects" class="mx-auto pt-12 md:pt-16 px-6 md:px-8 lg:px-12">
+      <div class="grid grid-cols-12 gap-y-4 gap-x-3 md:gap-x-4 lg:gap-x-16">
+        <div class="col-span-12 w-fit">
+          <div class="bg-gray-700/50 py-2 px-5 rounded-lg">
+            <h1 class="text-xl md:text-2xl lg:text-3xl font-bold">Projects</h1>
+          </div>
+        </div>
+        <div class="col-span-6 md:col-span-4">
+          <div class="flex flex-col gap-y-3">
+            <img
+              src="assets/image/Projects-bkk.png"
+              class="w-full h-full object-contain rounded-lg"
+              alt=""
+            />
+            <span class="text-sm md:text-base lg:text-xl font-bold"
+              >Website BKK SMKN 1 Pangkalan Kerinci</span
+            >
+            <div class="flex flex-row flex-wrap gap-2 text-xs">
+              <p class="px-3 py-1 bg-gray-200/50 rounded-full">HTML</p>
+              <p class="px-3 py-1 bg-gray-200/50 rounded-full">CSS</p>
+              <p class="px-3 py-1 bg-gray-200/50 rounded-full">Tailwind CSS</p>
+              <p class="px-3 py-1 bg-gray-200/50 rounded-full">PHP Native</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Educations -->
+    <section
+      id="Education"
+      class="mx-auto pt-12 md:pt-16 px-6 md:px-8 lg:px-12"
+    >
+      <div class="grid grid-cols-12 gap-y-4 md:gap-x-4 lg:gap-x-16">
+        <div class="col-span-12 mx-auto">
+          <div class="bg-gray-700/50 py-2 px-5 rounded-lg">
+            <h1 class="text-xl md:text-2xl lg:text-3xl font-bold">Education</h1>
+          </div>
+        </div>
+        <!-- SMK -->
+        <div class="col-span-12 md:col-span-6">
+          <div
+            class="flex flex-col bg-gradient-to-b from-cardWhiteFrom to-cardWhiteTo p-5 rounded-2xl text-black gap-y-5 md:gap-y-8 lg:gap-y-10 shadow-2xl"
+          >
+            <!-- Header -->
+            <div class="flex justify-between items-center">
+              <div
+                class="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden bg-white border border-gray-300 shadow-lg hover:cursor-pointer"
+              >
+                <img
+                  src="assets/image/logo-hasanah.png"
+                  class="w-full h-full object-cover"
+                  alt="Logo Hasanah"
+                />
+              </div>
+              <div
+                class="text-amber-600 p-2 rounded-full bg-black flex gap-x-2 items-center shadow-lg hover:cursor-pointer"
+              >
+                <i
+                  class="bx bxs-calendar text-base md:text-xl"
+                  aria-label="Kalender"
+                ></i>
+                <span class="text-xs md:text-sm font-semibold"
+                  >2019 - 2022</span
+                >
+              </div>
+              <div
+                class="text-black p-2 rounded-full bg-gray-400 flex gap-x-2 items-center shadow-lg hover:cursor-pointer"
+              >
+                <i
+                  class="bx bxs-graduation text-base md:text-2xl"
+                  aria-label="Graduation"
+                ></i>
+                <span class="font-semibold text-xs md:text-sm">Graduation</span>
+              </div>
+            </div>
+
+            <!-- Konten Utama -->
+            <div class="flex flex-col gap-y-2 md:gap-y-3 lg:gap-y-4">
+              <h1
+                class="text-base md:text-xl lg:text-2xl font-bold uppercase truncate"
+              >
+                SMKS Hasanah Pekanbaru
+              </h1>
+              <div class="flex flex-col gap-y-3 mt-3">
+                <!-- Bagian RPL -->
+                <div class="flex items-center gap-x-2">
+                  <div
+                    class="w-9 h-9 md:w-10 md:h-10 rounded-full overflow-hidden border-2 border-blue-500 shadow-lg"
+                  >
+                    <img
+                      src="assets/image/logo-rpl-hasanah.png"
+                      class="w-full h-full object-cover"
+                      alt="Logo RPL Hasanah"
+                    />
+                  </div>
+                  <p class="text-xs md:text-sm font-semibold text-gray-800">
+                    Rekayasa Perangkat Lunak
+                  </p>
+                </div>
+
+                <!-- Bagian Lokasi -->
+                <div class="flex items-center gap-x-2">
+                  <div
+                    class="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-red-100 border-2 border-yellow-600 shadow-lg p-2"
+                  >
+                    <svg
+                      class="w-6 h-6 text-yellow-600"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      aria-label="Lokasi"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12 2C8.134 2 5 5.134 5 9c0 5.25 7 11 7 11s7-5.75 7-11c0-3.866-3.134-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-xs md:text-sm font-semibold text-gray-800">
+                    Jl Cempedak, Pekanbaru, Indonesia
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kuliah -->
+        <div class="col-span-12 md:col-span-6">
+          <div
+            class="flex flex-col bg-gradient-to-b from-card-from to-card-to p-5 rounded-2xl text-black gap-y-5 md:gap-y-8 lg:gap-y-10 shadow-2xl"
+          >
+            <!-- Header -->
+            <div class="flex justify-between items-center">
+              <div
+                class="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden bg-white border border-gray-300 shadow-lg hover:cursor-pointer"
+              >
+                <img
+                  src="assets/image/logo-pnp.png"
+                  class="w-full h-full object-cover"
+                  alt="Logo PNP"
+                />
+              </div>
+              <div
+                class="text-amber-600 p-2 rounded-full bg-black flex gap-x-2 items-center shadow-lg hover:cursor-pointer"
+              >
+                <i
+                  class="bx bxs-calendar text-base md:text-xl"
+                  aria-label="Kalender"
+                ></i>
+                <span class="text-xs md:text-sm font-semibold"
+                  >2023 - 2026</span
+                >
+              </div>
+              <div
+                class="text-black p-2 rounded-full bg-gray-400 flex gap-x-2 items-center shadow-lg hover:cursor-pointer"
+              >
+                <i
+                  class="bx bxs-graduation text-base md:text-xl"
+                  aria-label="Graduation"
+                ></i>
+                <span class="font-semibold text-xs md:text-sm">Graduation</span>
+              </div>
+            </div>
+
+            <!-- Konten Utama -->
+            <div class="flex flex-col gap-y-2 md:gap-y-3 lg:gap-y-4">
+              <h1
+                class="text-base md:text-xl lg:text-2xl font-bold uppercase truncate"
+              >
+                Politeknik Negeri Padang
+              </h1>
+              <div class="flex flex-col gap-y-3 mt-3">
+                <!-- Bagian RPL -->
+                <div class="flex items-center gap-x-2">
+                  <div
+                    class="w-9 h-9 md:w-10 md:h-10 rounded-full overflow-hidden border-2 border-blue-500 shadow-lg"
+                  >
+                    <img
+                      src="assets/image/logo-mi-pnp.png"
+                      class="w-full h-full object-cover"
+                      alt="Logo Manajemen Informatika"
+                    />
+                  </div>
+                  <p class="text-xs md:text-sm font-semibold text-gray-800">
+                    D3 Manajemen Informatika PSDKU Pelalawan
+                  </p>
+                </div>
+
+                <!-- Bagian Lokasi -->
+                <div class="flex items-center gap-x-2">
+                  <div
+                    class="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-red-100 border-2 border-yellow-600 shadow-lg p-2"
+                  >
+                    <svg
+                      class="w-6 h-6 text-yellow-600"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      aria-label="Lokasi"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12 2C8.134 2 5 5.134 5 9c0 5.25 7 11 7 11s7-5.75 7-11c0-3.866-3.134-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-xs md:text-sm font-semibold text-gray-800">
+                    JL Maharaja Indra, Pelalawan, Indonesia
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificates -->
+    <section
+      id="Certificate"
+      class="mx-auto pt-12 md:pt-16 px-6 md:px-8 lg:px-12"
+    >
+      <div class="grid grid-cols-12 gap-y-4 md:gap-x-4 lg:gap-x-16">
+        <div class="col-span-12 mx-auto">
+          <div class="bg-gray-700/50 py-2 px-5 rounded-lg">
+            <h1 class="text-xl md:text-2xl lg:text-3xl font-bold">
+              Certificates
+            </h1>
+          </div>
+        </div>
+        <!-- Certificate -->
+        <div class="col-span-12 md:col-span-6">
+          <div
+            class="flex flex-col bg-gradient-to-b hover:bg-gradient-to-b from-cardWhiteFrom hover:from-card-from to-cardWhiteTo hover:to-card-to p-5 rounded-2xl text-black gap-y-5 md:gap-y-6 lg:gap-y-7 shadow-2xl hover:cursor-pointer"
+          >
+            <div class="flex justify-between items-center">
+              <div
+                class="flex items-center gap-x-3 h-10 rounded-full bg-black text-yellow-600 p-2 hover:cursor-pointer"
+              >
+                <img
+                  src="assets/image/logo-dicoding.jpg"
+                  class="w-full h-full object-cover rounded-full"
+                  alt=""
+                />
+                <span class="font-semibold text-sm">Dicoding</span>
+              </div>
+              <div>
+                <svg
+                  width="39"
+                  height="35"
+                  viewBox="0 0 39 54"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M32.8541 0.75H6.18301C3.02658 0.75 0.467773 3.26841 0.467773 6.375V47.625C0.467773 50.7317 3.02658 53.25 6.18301 53.25H32.8541C36.0107 53.25 38.5694 50.7317 38.5694 47.625V6.375C38.5694 3.26841 36.0107 0.75 32.8541 0.75Z"
+                    fill="#FF8F00"
+                  />
+                  <path
+                    d="M27.1389 38.25H11.8982C11.393 38.25 10.9084 38.0524 10.5512 37.7008C10.194 37.3492 9.99316 36.8723 9.99316 36.375C9.99316 35.8778 10.194 35.4008 10.5512 35.0492C10.9084 34.6976 11.393 34.5 11.8982 34.5H27.1389C27.6441 34.5 28.1288 34.6976 28.486 35.0492C28.8432 35.4008 29.044 35.8778 29.044 36.375C29.044 36.8723 28.8432 37.3492 28.486 37.7008C28.1288 38.0524 27.6441 38.25 27.1389 38.25Z"
+                    fill="#E0E0E0"
+                  />
+                  <path
+                    d="M23.3286 43.875H15.7083C15.2031 43.875 14.7184 43.6774 14.3612 43.3258C14.004 42.9742 13.8032 42.4973 13.8032 42C13.8032 41.5028 14.004 41.0258 14.3612 40.6742C14.7184 40.3226 15.2031 40.125 15.7083 40.125H23.3286C23.8339 40.125 24.3185 40.3226 24.6757 40.6742C25.0329 41.0258 25.2337 41.5028 25.2337 42C25.2337 42.4973 25.0329 42.9742 24.6757 43.3258C24.3185 43.6774 23.8339 43.875 23.3286 43.875Z"
+                    fill="#E0E0E0"
+                  />
+                  <path
+                    d="M30.949 17.2688C30.8909 16.9183 30.733 16.5913 30.4937 16.3258C30.2542 16.0603 29.9431 15.8672 29.5964 15.7688L23.7097 14.1188L21.1759 9.28132C21.0144 8.97897 20.7719 8.72583 20.4747 8.54924C20.1777 8.37265 19.837 8.2793 19.4899 8.2793C19.1428 8.2793 18.8024 8.37265 18.5052 8.54924C18.208 8.72583 17.9655 8.97897 17.8039 9.28132L15.2321 14.1188L9.51685 15.7875C9.17279 15.8844 8.8634 16.0749 8.62413 16.3369C8.38504 16.5988 8.22558 16.9219 8.16424 17.2688C8.09623 17.6203 8.13185 17.9837 8.26692 18.3159C8.40199 18.6482 8.63079 18.9354 8.92627 19.1438L12.7364 21.8063L11.8982 26.6625C11.8302 27.0141 11.8658 27.3774 12.0009 27.7097C12.136 28.0419 12.3648 28.3292 12.6602 28.5375C12.9948 28.7676 13.3954 28.8859 13.8033 28.875C14.106 28.878 14.4055 28.8139 14.6796 28.6875L19.5185 26.2125L24.3765 28.5938C24.6809 28.7334 25.0175 28.7914 25.3521 28.7618C25.6866 28.7321 26.0074 28.6161 26.2816 28.425C26.5772 28.2167 26.806 27.9294 26.9409 27.5972C27.076 27.2649 27.1116 26.9016 27.0436 26.55L26.2625 21.6938L30.0727 19.05C30.3729 18.8631 30.6143 18.5972 30.7692 18.2826C30.9239 17.9678 30.9863 17.6166 30.949 17.2688Z"
+                    fill="#283593"
+                  />
+                  <path
+                    d="M6.18301 0.75C4.66724 0.75 3.21355 1.34263 2.14173 2.39752C1.06991 3.45242 0.467773 4.88316 0.467773 6.375V47.625C0.467773 49.1167 1.06991 50.5476 2.14173 51.6024C3.21355 52.6573 4.66724 53.25 6.18301 53.25H19.5186V0.75H6.18301Z"
+                    fill="#FFA726"
+                  />
+                  <path
+                    d="M11.8982 34.5C11.393 34.5 10.9084 34.6976 10.5512 35.0492C10.194 35.4008 9.99316 35.8778 9.99316 36.375C9.99316 36.8723 10.194 37.3492 10.5512 37.7008C10.9084 38.0524 11.393 38.25 11.8982 38.25H19.5186V34.5H11.8982Z"
+                    fill="#FAFAFA"
+                  />
+                  <path
+                    d="M15.7083 40.125C15.2031 40.125 14.7184 40.3226 14.3612 40.6742C14.004 41.0258 13.8032 41.5028 13.8032 42C13.8032 42.4973 14.004 42.9742 14.3612 43.3258C14.7184 43.6774 15.2031 43.875 15.7083 43.875H19.5185V40.125H15.7083Z"
+                    fill="#FAFAFA"
+                  />
+                  <path
+                    d="M17.8039 9.28117L15.2321 14.1187L9.51685 15.7875C9.17279 15.8844 8.8634 16.0747 8.62413 16.3366C8.38504 16.5986 8.22558 16.9216 8.16424 17.2687C8.09623 17.6203 8.13185 17.9835 8.26692 18.3157C8.40199 18.648 8.63079 18.9352 8.92627 19.1437L12.7364 21.8062L11.8982 26.6625C11.8302 27.014 11.8658 27.3772 12.0009 27.7095C12.136 28.0417 12.3647 28.329 12.6602 28.5375C12.9948 28.7675 13.3954 28.8858 13.8033 28.875C14.106 28.8778 14.4055 28.8138 14.6796 28.6875L19.5185 26.2125V8.36242C19.175 8.3491 18.8344 8.42746 18.5326 8.58922C18.2307 8.75095 17.979 8.99005 17.8039 9.28117Z"
+                    fill="#3949AB"
+                  />
+                </svg>
+              </div>
+            </div>
+            <span
+              class="font-semibold text-xs md:text-sm lg:text-base text-justify"
+              >Bikin Website Company Tanpa Coding Dengan WordPress dan
+              Elementor</span
+            >
+            <div>
+              <a
+                href=""
+                class="flex items-center gap-x-2 text-xs font-semibold hover:font-medium bg-gray-300 hover:bg-gray-600 hover:text-white ease-in duration-200 w-fit py-2 px-3 rounded-full shadow-lg hover:cursor-pointer"
+              >
+                <i class="bx bx-show text-xl"></i>
+                View
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificate -->
+        <div class="col-span-12 md:col-span-6">
+          <div
+            class="flex flex-col bg-gradient-to-b hover:bg-gradient-to-b from-cardWhiteFrom hover:from-card-from to-cardWhiteTo hover:to-card-to p-5 rounded-2xl text-black gap-y-5 md:gap-y-6 lg:gap-y-7 shadow-2xl hover:cursor-pointer"
+          >
+            <div class="flex justify-between items-center">
+              <div
+                class="flex items-center gap-x-3 h-10 rounded-full bg-black text-yellow-600 p-2 hover:cursor-pointer"
+              >
+                <img
+                  src="assets/image/logo-dicoding.jpg"
+                  class="w-full h-full object-cover rounded-full"
+                  alt=""
+                />
+                <span class="font-semibold text-sm">Dicoding</span>
+              </div>
+              <div>
+                <svg
+                  width="39"
+                  height="35"
+                  viewBox="0 0 39 54"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M32.8541 0.75H6.18301C3.02658 0.75 0.467773 3.26841 0.467773 6.375V47.625C0.467773 50.7317 3.02658 53.25 6.18301 53.25H32.8541C36.0107 53.25 38.5694 50.7317 38.5694 47.625V6.375C38.5694 3.26841 36.0107 0.75 32.8541 0.75Z"
+                    fill="#FF8F00"
+                  />
+                  <path
+                    d="M27.1389 38.25H11.8982C11.393 38.25 10.9084 38.0524 10.5512 37.7008C10.194 37.3492 9.99316 36.8723 9.99316 36.375C9.99316 35.8778 10.194 35.4008 10.5512 35.0492C10.9084 34.6976 11.393 34.5 11.8982 34.5H27.1389C27.6441 34.5 28.1288 34.6976 28.486 35.0492C28.8432 35.4008 29.044 35.8778 29.044 36.375C29.044 36.8723 28.8432 37.3492 28.486 37.7008C28.1288 38.0524 27.6441 38.25 27.1389 38.25Z"
+                    fill="#E0E0E0"
+                  />
+                  <path
+                    d="M23.3286 43.875H15.7083C15.2031 43.875 14.7184 43.6774 14.3612 43.3258C14.004 42.9742 13.8032 42.4973 13.8032 42C13.8032 41.5028 14.004 41.0258 14.3612 40.6742C14.7184 40.3226 15.2031 40.125 15.7083 40.125H23.3286C23.8339 40.125 24.3185 40.3226 24.6757 40.6742C25.0329 41.0258 25.2337 41.5028 25.2337 42C25.2337 42.4973 25.0329 42.9742 24.6757 43.3258C24.3185 43.6774 23.8339 43.875 23.3286 43.875Z"
+                    fill="#E0E0E0"
+                  />
+                  <path
+                    d="M30.949 17.2688C30.8909 16.9183 30.733 16.5913 30.4937 16.3258C30.2542 16.0603 29.9431 15.8672 29.5964 15.7688L23.7097 14.1188L21.1759 9.28132C21.0144 8.97897 20.7719 8.72583 20.4747 8.54924C20.1777 8.37265 19.837 8.2793 19.4899 8.2793C19.1428 8.2793 18.8024 8.37265 18.5052 8.54924C18.208 8.72583 17.9655 8.97897 17.8039 9.28132L15.2321 14.1188L9.51685 15.7875C9.17279 15.8844 8.8634 16.0749 8.62413 16.3369C8.38504 16.5988 8.22558 16.9219 8.16424 17.2688C8.09623 17.6203 8.13185 17.9837 8.26692 18.3159C8.40199 18.6482 8.63079 18.9354 8.92627 19.1438L12.7364 21.8063L11.8982 26.6625C11.8302 27.0141 11.8658 27.3774 12.0009 27.7097C12.136 28.0419 12.3648 28.3292 12.6602 28.5375C12.9948 28.7676 13.3954 28.8859 13.8033 28.875C14.106 28.878 14.4055 28.8139 14.6796 28.6875L19.5185 26.2125L24.3765 28.5938C24.6809 28.7334 25.0175 28.7914 25.3521 28.7618C25.6866 28.7321 26.0074 28.6161 26.2816 28.425C26.5772 28.2167 26.806 27.9294 26.9409 27.5972C27.076 27.2649 27.1116 26.9016 27.0436 26.55L26.2625 21.6938L30.0727 19.05C30.3729 18.8631 30.6143 18.5972 30.7692 18.2826C30.9239 17.9678 30.9863 17.6166 30.949 17.2688Z"
+                    fill="#283593"
+                  />
+                  <path
+                    d="M6.18301 0.75C4.66724 0.75 3.21355 1.34263 2.14173 2.39752C1.06991 3.45242 0.467773 4.88316 0.467773 6.375V47.625C0.467773 49.1167 1.06991 50.5476 2.14173 51.6024C3.21355 52.6573 4.66724 53.25 6.18301 53.25H19.5186V0.75H6.18301Z"
+                    fill="#FFA726"
+                  />
+                  <path
+                    d="M11.8982 34.5C11.393 34.5 10.9084 34.6976 10.5512 35.0492C10.194 35.4008 9.99316 35.8778 9.99316 36.375C9.99316 36.8723 10.194 37.3492 10.5512 37.7008C10.9084 38.0524 11.393 38.25 11.8982 38.25H19.5186V34.5H11.8982Z"
+                    fill="#FAFAFA"
+                  />
+                  <path
+                    d="M15.7083 40.125C15.2031 40.125 14.7184 40.3226 14.3612 40.6742C14.004 41.0258 13.8032 41.5028 13.8032 42C13.8032 42.4973 14.004 42.9742 14.3612 43.3258C14.7184 43.6774 15.2031 43.875 15.7083 43.875H19.5185V40.125H15.7083Z"
+                    fill="#FAFAFA"
+                  />
+                  <path
+                    d="M17.8039 9.28117L15.2321 14.1187L9.51685 15.7875C9.17279 15.8844 8.8634 16.0747 8.62413 16.3366C8.38504 16.5986 8.22558 16.9216 8.16424 17.2687C8.09623 17.6203 8.13185 17.9835 8.26692 18.3157C8.40199 18.648 8.63079 18.9352 8.92627 19.1437L12.7364 21.8062L11.8982 26.6625C11.8302 27.014 11.8658 27.3772 12.0009 27.7095C12.136 28.0417 12.3647 28.329 12.6602 28.5375C12.9948 28.7675 13.3954 28.8858 13.8033 28.875C14.106 28.8778 14.4055 28.8138 14.6796 28.6875L19.5185 26.2125V8.36242C19.175 8.3491 18.8344 8.42746 18.5326 8.58922C18.2307 8.75095 17.979 8.99005 17.8039 9.28117Z"
+                    fill="#3949AB"
+                  />
+                </svg>
+              </div>
+            </div>
+            <span
+              class="font-semibold text-xs md:text-sm lg:text-base text-justify"
+              >Bikin Website Company Tanpa Coding Dengan WordPress dan
+              Elementor</span
+            >
+            <div>
+              <a
+                href=""
+                class="flex items-center gap-x-2 text-xs font-semibold hover:font-medium bg-gray-300 hover:bg-gray-600 hover:text-white ease-in duration-200 w-fit py-2 px-3 rounded-full shadow-lg hover:cursor-pointer"
+              >
+                <i class="bx bx-show text-xl"></i>
+                View
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Addition" class="mx-auto pt-12 md:pt-16 px-6 md:px-8 lg:px-12">
+      <div class="grid grid-cols-12 gap-5">
+        <div class="col-span-12 md:col-span-4">
+          <div class="space-y-6 flex flex-col justify-between h-full">
+            <span
+              class="text-[#C6FCA6] font-semibold uppercase text-base md:text-xl lg:text-2xl"
+            >
+              Di Luar Portofolio</span
+            >
+            <p class="text-xl md:text-2xl lg:text-3xl mt-2 font-serif">
+              Mari kenali saya lebih dalam
+            </p>
+            <div
+              class="relative flex flex-col items-center gap-y-4 bg-black/20 border-1 border-[#C6FCA6]/20 rounded-lg pt-10 h-full"
+            >
+              <div class="absolute bottom-0 z-[-10]">
+                <img src="assets/image/blur-layer.png" alt="" />
+              </div>
+
+              <span class="font-serif text-base uppercase"
+                ><i class="bx bxs-star text-[#C6FCA6]"></i> favorite movie</span
+              >
+              <p class="text-xs text-secondary">
+                Susah milih satu, soalnya banyak film yang bagus!
+              </p>
+              <img
+                src="assets/image/Harry_Potter.png"
+                class="w-[200px] h-[160px]"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-4">
+          <div
+            class="relative flex flex-col p-10 gap-y-4 bg-black/20 border-1 border-[#C6FCA6]/20 rounded-lg pt-10 overflow-hidden h-full"
+          >
+            <div class="absolute top-0 left-0 z-[-10]">
+              <img src="assets/image/blur-layer-top.png" alt="" />
+            </div>
+
+            <span class="font-serif text-base uppercase"
+              ><i class="bx bxs-star text-[#C6FCA6]"></i> My Skils</span
+            >
+            <p class="text-xs text-secondary">
+              Bahasa pemrograman & framework yang saya pakai!
+            </p>
+            <div class="flex flex-row gap-3 flex-wrap">
+              <div
+                class="p-2 w-15 h-15 border bg-[#C6FCA6] hover:bg-[#A7FCEE] hover:cursor-pointer rounded-lg"
+              >
+                <img
+                  src="assets/image/html.png"
+                  class="w-full h-full object-contain"
+                  alt=""
+                />
+              </div>
+              <div
+                class="p-2 w-15 h-15 border bg-[#C6FCA6] hover:bg-[#A7FCEE] hover:cursor-pointer rounded-lg"
+              >
+                <img
+                  src="assets/image/css-logo.png"
+                  class="w-full h-full object-contain"
+                  alt=""
+                />
+              </div>
+              <div
+                class="p-2 w-15 h-15 border bg-[#C6FCA6] hover:bg-[#A7FCEE] hover:cursor-pointer rounded-lg"
+              >
+                <img
+                  src="assets/image/bootstrap.png"
+                  class="w-full h-full object-contain"
+                  alt=""
+                />
+              </div>
+              <div
+                class="p-2 w-15 h-15 border bg-[#C6FCA6] hover:bg-[#A7FCEE] hover:cursor-pointer rounded-lg"
+              >
+                <img
+                  src="assets/image/tailwind-css.png"
+                  class="w-full h-full object-contain"
+                  alt=""
+                />
+              </div>
+              <div
+                class="p-2 w-15 h-15 border bg-[#C6FCA6] hover:bg-[#A7FCEE] hover:cursor-pointer rounded-lg"
+              >
+                <img
+                  src="assets/image/php.png"
+                  class="w-full h-full object-contain"
+                  alt=""
+                />
+              </div>
+              <div
+                class="p-2 w-15 h-15 border bg-[#C6FCA6] hover:bg-[#A7FCEE] hover:cursor-pointer rounded-lg"
+              >
+                <img
+                  src="assets/image/laravel.png"
+                  class="w-full h-full object-contain"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-4">
+          <div class="flex flex-row md:flex-col gap-4 h-full">
+            <!-- MAPS CONTAINER -->
+            <div
+              class="relative w-2/3 md:w-full flex flex-col bg-black/20 border border-[#C6FCA6]/20 rounded-lg overflow-hidden backdrop-blur-2xl md:h-[150px] h-full"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7209432469444!2d101.85664927496471!3d0.4003043995957733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5c4e3b407ca9f%3A0xef44d9959e8f060d!2sAkademi%20komunitas%20negeri%20pelalawan!5e0!3m2!1sen!2sid!4v1738987347123!5m2!1sen!2sid"
+                class="w-full h-full aspect-[4/3] border-0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+
+            <!-- SKILLS CONTAINER -->
+            <div
+              class="relative w-full flex flex-col p-6 gap-y-4 bg-black/20 border border-[#C6FCA6]/20 rounded-lg overflow-hidden h-full"
+            >
+              <!-- Layer Blur -->
+              <div class="absolute top-0 left-0 w-full h-full z-[-10]">
+                <img
+                  src="assets/image/blur-layer-top.png"
+                  class="w-full h-full object-cover"
+                  alt=""
+                />
+              </div>
+
+              <span class="font-serif text-base uppercase z-10">
+                <i class="bx bxs-star text-[#C6FCA6]"></i> My Hobbies
+              </span>
+              <p class="text-xs text-secondary z-10">
+                Hobi yang biasa saya lakukan
+              </p>
+
+              <div class="flex flex-row gap-3 flex-wrap z-10">
+                <div
+                  class="p-1 border bg-[#C6FCA6] rounded-lg hover:bg-[#A7FCEE] hover:cursor-pointer"
+                >
+                  <p class="text-xs text-black font-semibold">Futsal</p>
+                </div>
+                <div
+                  class="p-1 border bg-[#C6FCA6] rounded-lg hover:bg-[#A7FCEE] hover:cursor-pointer"
+                >
+                  <p class="text-xs text-black font-semibold">Mobile Legend</p>
+                </div>
+                <div
+                  class="p-1 border bg-[#C6FCA6] rounded-lg hover:bg-[#A7FCEE] hover:cursor-pointer"
+                >
+                  <p class="text-xs text-black font-semibold">Coding</p>
+                </div>
+                <div
+                  class="p-1 border bg-[#C6FCA6] rounded-lg hover:bg-[#A7FCEE] hover:cursor-pointer"
+                >
+                  <p class="text-xs text-black font-semibold">Badminton</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer
+      class="mx-auto mt-12 md:mt-16 px-6 md:px-8 lg:px-12 bg-[#232732] pt-4 pb-2 rounded-t-3xl"
+    >
+      <div
+        class="flex flex-col md:flex-row gap-y-6 justify-between items-center"
+      >
+        <span class="font-tangerine text-3xl font-bold hover:cursor-pointer">
+          @Zakyftrrhmn_
+        </span>
+        <div class="flex flex-col md:flex-row gap-y-2 items-center gap-x-5">
+          <p>Find Me On</p>
+          <div class="flex items-center gap-2">
+            <!-- Instagram -->
+            <a
+              href="https://www.instagram.com/zakyftrrhmn_/#"
+              target="_blank"
+              class="w-8 h-8 flex items-center justify-center rounded-full bg-red-400 text-white text-xl hover:bg-red-500 transition-all"
+            >
+              <i class="bx bxl-instagram-alt"></i>
+            </a>
+
+            <!-- Facebook -->
+            <a
+              href="https://www.linkedin.com/in/zaky-fathur-rahman-777709253"
+              target="_blank"
+              class="w-8 h-8 flex items-center justify-center rounded-full bg-blue-600 text-white text-xl hover:bg-blue-700 transition-all"
+            >
+              <i class="bx bxl-linkedin"></i>
+            </a>
+
+            <!-- Telegram -->
+            <a
+              href="https://t.me/Zakyftrrhmn"
+              target="_blank"
+              class="w-8 h-8 flex items-center justify-center rounded-full bg-blue-400 text-white text-xl hover:bg-blue-500 transition-all"
+            >
+              <i class="bx bxl-telegram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <!-- Navbar -->
+    <script>
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
+
+    <!-- Audio -->
+    <script>
+      const playButton = document.getElementById("playButton");
+      const audioPlayer = document.getElementById("audioPlayer");
+      const albumImage = document.getElementById("AlbumImage");
+
+      playButton.addEventListener("click", () => {
+        if (audioPlayer.paused) {
+          audioPlayer.play();
+          albumImage.classList.add("animate-spin");
+          playButton.classList.replace("bx-play-circle", "bx-pause-circle");
+        } else {
+          audioPlayer.pause();
+          albumImage.classList.remove("animate-spin");
+          playButton.classList.replace("bx-pause-circle", "bx-play-circle");
+        }
+      });
+    </script>
+
+    <!-- CV -->
+    <script>
+      function downloadCV() {
+        window.open("assets/file/CV.pdf", "_blank");
+      }
+    </script>
+
+    <!-- Nav Link -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        function changeActiveLink() {
+          let scrollY = window.scrollY;
+
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop - 80;
+            const sectionHeight = section.clientHeight;
+            const sectionId = section.getAttribute("id");
+
+            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+              navLinks.forEach((link) => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === `#${sectionId}`) {
+                  link.classList.add("active");
+                }
+              });
+            }
+          });
+        }
+
+        window.addEventListener("scroll", changeActiveLink);
+      });
+    </script>
+  </body>
+</html>
